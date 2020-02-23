@@ -1,0 +1,102 @@
+#display-tile {
+  opacity: 0;
+  display: none;
+  float: right;
+}
+
+#outer-tile {
+  display: inline-block;
+  color: white;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outer-tile:hover {
+  opacity: 0.95;
+}
+
+#display-tile:checked ~ #outer-tile #inner {
+  -webkit-clip-path: circle(55% at 50% 50%);
+          clip-path: circle(55% at 50% 50%);
+}
+
+body {
+  background: #f5eded;
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Nunito', 'sans-serif';
+}
+
+#inner {
+  -webkit-transition: -webkit-clip-path ease-in-out 0.5s;
+  transition: -webkit-clip-path ease-in-out 0.5s;
+  transition: clip-path ease-in-out 0.5s;
+  transition: clip-path ease-in-out 0.5s, -webkit-clip-path ease-in-out 0.5s;
+  background-color: #d72323;
+  opacity: 0.85;
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#text-over-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#tile-text {
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  height: 80%;
+  font-size: 20px;
+}
+
+#tile-text p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tile-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+/*# sourceMappingURL=style.css.map */
